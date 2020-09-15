@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WhereIsMyOrderAPI.Repositories;
 using Microsoft.Extensions.Configuration;
+using OidcApiAuthorization;
 
 [assembly: FunctionsStartup(typeof(WhereIsMyOrderAPI.Startup))]
 namespace WhereIsMyOrderAPI
@@ -21,6 +22,9 @@ namespace WhereIsMyOrderAPI
 
             // Repositories
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+
+            // OIDC Authorization
+            builder.Services.AddOidcApiAuthorization();
         }
     }
 }

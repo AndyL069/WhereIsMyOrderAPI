@@ -10,7 +10,6 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using Microsoft.WindowsAzure.Storage;
 
 namespace WhereIsMyOrderAPI
 {
@@ -80,7 +79,7 @@ namespace WhereIsMyOrderAPI
             [HttpTrigger(AuthorizationLevel.Anonymous, "DELETE", Route = "DeleteOrders")] HttpRequest req,
             ILogger log)
         {
-            log.LogInformation("DeleteOrder function processed a request.");
+            log.LogInformation("DeleteOrders function processed a request.");
             var orderIdsString = req.Query["orderIds"].ToString();
             var orderIdsSplitted = orderIdsString.Split(',');
             int[] orderIds = Array.ConvertAll(orderIdsSplitted, s => int.Parse(s));

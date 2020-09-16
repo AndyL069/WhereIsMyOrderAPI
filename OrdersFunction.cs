@@ -41,7 +41,7 @@ namespace WhereIsMyOrderAPI
                 return new UnauthorizedResult();
             }
 
-            log.LogWarning($"HTTP trigger function UpdateOrder request is authorized.");
+            log.LogWarning($"HTTP trigger function GetOrdersForUser request is authorized.");
             string userId = req.Query["userId"];
             var results = OrderRepository.GetAll().Where(x => x.UserId == userId).ToArray();
             return results;

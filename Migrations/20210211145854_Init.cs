@@ -15,12 +15,13 @@ namespace WhereIsMyOrderAPI.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Company = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true),
-                    Arrival = table.Column<DateTime>(nullable: false),
+                    ArrivalDate = table.Column<DateTime>(nullable: false),
                     Link = table.Column<string>(nullable: true),
                     Status = table.Column<string>(nullable: true),
                     ZipCode = table.Column<string>(nullable: true),
                     TrackingNumber = table.Column<string>(nullable: true),
-                    UserId = table.Column<string>(nullable: true)
+                    UserId = table.Column<string>(nullable: true),
+                    ArrivalTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {

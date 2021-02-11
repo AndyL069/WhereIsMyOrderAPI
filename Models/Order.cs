@@ -9,7 +9,7 @@ namespace WhereIsMyOrderAPI.Models
 
         public string Title { get; set; }
 
-        public DateTime Arrival { get; set; }
+        public DateTime ArrivalDate { get; set; }
 
         public string Link { get; set; }
 
@@ -20,5 +20,6 @@ namespace WhereIsMyOrderAPI.Models
         public string TrackingNumber { get; set; }
 
         public string UserId { get; set; }
+        public DateTime ArrivalTime { get; set; }
     }
 }
